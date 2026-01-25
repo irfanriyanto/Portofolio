@@ -524,7 +524,7 @@ a, button, .card-hover, .tech-badge {
 /* Project Image Container */
 .project-image-container {
     width: 100%;
-    height: 240px;
+    aspect-ratio: 16 / 9;
     border-radius: 16px;
     background: var(--color-light);
     box-shadow: inset 6px 6px 10px var(--shadow-light-1), inset -6px -6px 10px var(--shadow-light-2);
@@ -534,7 +534,6 @@ a, button, .card-hover, .tech-badge {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 12px;
 }
 
 .dark .project-image-container {
@@ -544,7 +543,7 @@ a, button, .card-hover, .tech-badge {
 .project-image {
     width: 100%;
     height: 100%;
-    object-fit: contain;
+    object-fit: cover;
     display: block;
 }
 
@@ -563,10 +562,6 @@ a, button, .card-hover, .tech-badge {
     .photo-frame {
         width: 280px;
         height: 280px;
-    }
-    
-    .project-image-container {
-        height: 200px;
     }
 }
 
