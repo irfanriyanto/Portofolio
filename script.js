@@ -339,7 +339,7 @@ function animateCounter(element, target, duration = 2000) {
 const statsObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
-            const counters = entry.target.querySelectorAll('[data-count]');
+            const counters = document.querySelectorAll('[data-count]');
             counters.forEach(counter => {
                 const target = parseInt(counter.dataset.count);
                 animateCounter(counter, target);
@@ -347,7 +347,7 @@ const statsObserver = new IntersectionObserver((entries) => {
             statsObserver.unobserve(entry.target);
         }
     });
-}, { threshold: 0.5 });
+}, { threshold: 0.3 });
 
 const statsSection = document.querySelector('#experience');
 if (statsSection) {
