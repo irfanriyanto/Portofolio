@@ -531,6 +531,10 @@ a, button, .card-hover, .tech-badge {
     overflow: hidden;
     position: relative;
     transition: all 300ms ease-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px;
 }
 
 .dark .project-image-container {
@@ -540,7 +544,7 @@ a, button, .card-hover, .tech-badge {
 .project-image {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
     display: block;
 }
 
@@ -907,7 +911,7 @@ a, button, .card-hover, .tech-badge {
 }
 
 .project-image-container:hover .project-image {
-    transform: scale(1.05);
+    transform: scale(1.02);
 }
 
 /* Button Ripple Effect */
