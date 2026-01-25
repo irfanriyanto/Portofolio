@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Irfan Riyanto - IT Support Professional</title>
+    <meta name="description" content="Portofolio Irfan Riyanto - IT Support Professional dengan pengalaman 5+ tahun">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        'light': '#E0E5EC',
+                        'dark': '#1A202C',
+                        'accent': '#6D7993'
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="font-body bg-light dark:bg-dark text-primary transition-colors duration-300">
+    
+    <!-- Navigation -->
+    <nav class="sticky top-0 z-50 backdrop-blur-md bg-light/90 dark:bg-dark/90 transition-colors duration-300">
+        <div class="max-w-7xl mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 rounded-xl bg-[#6D7993] flex items-center justify-center shadow-light dark:shadow-dark">
+                        <span class="text-white font-display font-bold text-lg">IR</span>
+                    </div>
+                    <div class="text-xl font-display font-bold text-primary">Irfan Riyanto</div>
+                </div>
+                
+                <div class="flex items-center gap-4">
+                    <!-- Desktop Menu -->
+                    <div class="hidden md:flex items-center gap-3">
+                        <a href="#home" class="nav-btn">Home</a>
+                        <a href="#about" class="nav-btn">Tentang</a>
+                        <a href="#skills" class="nav-btn">Keahlian</a>
+                        <a href="#projects" class="nav-btn">Project</a>
+                        <a href="#experience" class="nav-btn">Pengalaman</a>
+                        <a href="#contact" class="nav-btn-primary">Kontak</a>
+                    </div>
+                    
+                    <!-- Dark Mode Toggle Switch -->
+                    <div class="theme-switch-wrapper">
+                        <label class="theme-switch" for="checkbox">
+                            <input type="checkbox" id="checkbox" />
+                            <div class="slider">
+                                <svg class="sun-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <circle cx="12" cy="12" r="5"></circle>
+                                    <line x1="12" y1="1" x2="12" y2="3"></line>
+                                    <line x1="12" y1="21" x2="12" y2="23"></line>
+                                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                                    <line x1="1" y1="12" x2="3" y2="12"></line>
+                                    <line x1="21" y1="12" x2="23" y2="12"></line>
+                                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                                </svg>
+                                <svg class="moon-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                                </svg>
+                            </div>
+                        </label>
+                    </div>
+                    
+                    <!-- Mobile Menu Button -->
+                    <button id="menuBtn" class="md:hidden w-12 h-12 rounded-2xl btn-secondary flex items-center justify-center focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 focus:ring-offset-light dark:focus:ring-offset-dark transition-all duration-300" aria-label="Toggle menu">
+                        <svg id="menuIcon" class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                        <svg id="closeIcon" class="w-6 h-6 hidden text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Mobile Menu -->
+            <div id="mobileMenu" class="hidden md:hidden mt-4 p-6 rounded-[32px] shadow-extruded">
+                <ul class="flex flex-col gap-3">
+                    <li><a href="#home" class="nav-btn block text-center">Home</a></li>
+                    <li><a href="#about" class="nav-btn block text-center">Tentang</a></li>
+                    <li><a href="#skills" class="nav-btn block text-center">Keahlian</a></li>
+                    <li><a href="#projects" class="nav-btn block text-center">Project</a></li>
+                    <li><a href="#experience" class="nav-btn block text-center">Pengalaman</a></li>
+                    <li><a href="#contact" class="nav-btn-primary block text-center">Kontak</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="py-20 md:py-32 px-6 relative overflow-hidden">
+        <!-- Animated Background Circles -->
+        <div class="absolute top-20 right-10 w-64 h-64 bg-accent/5 rounded-full blur-3xl animate-float"></div>
+        <div class="absolute bottom-20 left-10 w-96 h-96 bg-accent/5 rounded-full blur-3xl animate-float-delayed"></div>
+        
+        <div class="max-w-7xl mx-auto relative z-10">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="space-y-6" data-aos="fade-right" data-aos-duration="800">
+                    <h1 class="font-display font-extrabold text-5xl md:text-7xl tracking-tight">
+                        Halo, Saya<br>
+                        <span class="text-accent typing-text">Irfan Riyanto</span>
+                    </h1>
+                    <p class="text-xl md:text-2xl text-secondary font-medium">
+                        IT Support Professional
+                    </p>
+                    <p class="text-base md:text-lg text-secondary">
+                        Dengan pengalaman 5+ tahun dalam memberikan solusi IT yang efektif dan mendukung operasional perusahaan dengan teknologi terkini.
+                    </p>
+                    <div class="flex gap-4 pt-4">
+                        <a href="#projects" class="btn-primary focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 focus:ring-offset-light dark:ring-offset-dark">
+                            Lihat Project
+                        </a>
+                        <a href="#contact" class="btn-secondary focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 focus:ring-offset-light dark:ring-offset-dark">
+                            Hubungi Saya
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Hero Photo -->
+                <div class="relative max-w-md mx-auto" data-aos="fade-left" data-aos-duration="800" data-aos-delay="200">
+                    <div class="photo-container">
+                        <div class="photo-frame">
+                            <!-- Placeholder untuk foto - ganti src dengan path foto Anda -->
+                            <img src="./assets/profile-photo.jpg" alt="Irfan Riyanto" class="profile-photo" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <div class="photo-placeholder">
+                                <svg class="w-24 h-24 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path>
+                                </svg>
+                                <p class="text-secondary text-sm mt-4">Foto Profil</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 px-6">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="font-display font-bold text-4xl md:text-5xl tracking-tight text-center mb-12" data-aos="fade-up">Tentang Saya</h2>
+            
+            <div class="card max-w-4xl mx-auto" data-aos="fade-up" data-aos-delay="200">
+                <div class="flex flex-col md:flex-row gap-8 items-center">
+                    <div class="icon-well-large flex-shrink-0">
+                        <svg class="w-16 h-16 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path>
+                        </svg>
+                    </div>
+                    <div class="flex-1 text-center md:text-left">
+                        <h3 class="font-display font-bold text-2xl mb-4">IT Enthusiast & Problem Solver</h3>
+                        <p class="text-secondary leading-relaxed mb-4">
+                            Saya adalah seorang IT Support professional dengan passion dalam teknologi dan pemecahan masalah. Selama 5+ tahun berkarir, saya telah membantu ratusan pengguna mengatasi berbagai tantangan teknis dan meningkatkan produktivitas mereka.
+                        </p>
+                        <p class="text-secondary leading-relaxed">
+                            Keahlian saya mencakup troubleshooting hardware & software, manajemen jaringan, sistem administrasi, dan memberikan pelatihan teknis kepada end-user. Saya percaya bahwa teknologi harus memberdayakan, bukan memperumit.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 px-6">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="font-display font-bold text-4xl md:text-5xl tracking-tight text-center mb-12" data-aos="fade-up">Keahlian Teknis</h2>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Skill Card 1 -->
+                <div class="card-hover skill-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="icon-well">
+                        <svg class="w-8 h-8 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="font-display font-bold text-xl mb-3">Hardware Support</h3>
+                    <p class="text-secondary">Troubleshooting, maintenance, dan upgrade komputer, laptop, printer, dan perangkat IT lainnya.</p>
+                </div>
+
+                <!-- Skill Card 2 -->
+                <div class="card-hover">
+                    <div class="icon-well">
+                        <svg class="w-8 h-8 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
+                        </svg>
+                    </div>
+                    <h3 class="font-display font-bold text-xl mb-3">Software Support</h3>
+                    <p class="text-secondary">Instalasi, konfigurasi, dan troubleshooting Windows, Office, aplikasi bisnis, dan software enterprise.</p>
+                </div>
+
+                <!-- Skill Card 3 -->
+                <div class="card-hover">
+                    <div class="icon-well">
+                        <svg class="w-8 h-8 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"></path>
+                        </svg>
+                    </div>
+                    <h3 class="font-display font-bold text-xl mb-3">Network Administration</h3>
+                    <p class="text-secondary">Konfigurasi jaringan LAN/WAN, router, switch, firewall, dan troubleshooting konektivitas.</p>
+                </div>
+
+                <!-- Skill Card 4 -->
+                <div class="card-hover">
+                    <div class="icon-well">
+                        <svg class="w-8 h-8 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2m-2-4h.01M17 16h.01"></path>
+                        </svg>
+                    </div>
+                    <h3 class="font-display font-bold text-xl mb-3">System Administration</h3>
+                    <p class="text-secondary">Manajemen Active Directory, user accounts, permissions, backup systems, dan server maintenance.</p>
+                </div>
+
+                <!-- Skill Card 5 -->
+                <div class="card-hover">
+                    <div class="icon-well">
+                        <svg class="w-8 h-8 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="font-display font-bold text-xl mb-3">Security & Compliance</h3>
+                    <p class="text-secondary">Implementasi security policies, antivirus management, dan compliance dengan standar keamanan IT.</p>
+                </div>
+
+                <!-- Skill Card 6 -->
+                <div class="card-hover">
+                    <div class="icon-well">
+                        <svg class="w-8 h-8 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="font-display font-bold text-xl mb-3">User Training</h3>
+                    <p class="text-secondary">Memberikan pelatihan teknis kepada end-user dan membuat dokumentasi SOP yang mudah dipahami.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 px-6 bg-[#E0E5EC]">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="font-display font-bold text-4xl md:text-5xl tracking-tight text-center mb-12" data-aos="fade-up">Project Portfolio</h2>
+            
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Project 1: RukunApp -->
+                <div class="card-hover" data-aos="fade-up" data-aos-delay="100">
+                    <!-- Project Screenshot -->
+                    <div class="project-image-container mb-6">
+                        <img src="./assets/rukunapp-screenshot.jpg" alt="RukunApp Screenshot" class="project-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="project-image-placeholder">
+                            <svg class="w-16 h-16 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                            </svg>
+                            <p class="text-secondary text-sm mt-2">Screenshot Project</p>
+                        </div>
+                    </div>
+                    
+                    <div class="icon-well mb-4 inline-flex">
+                        <svg class="w-8 h-8 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="font-display font-bold text-2xl mb-3">RukunApp</h3>
+                    <p class="text-secondary mb-4">Sistem Manajemen dan Administrasi Data Warga untuk mengelola data warga, administrasi warga, kegiatan warga, arsip desa dan lain-lain.</p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="tech-badge">PHP</span>
+                        <span class="tech-badge">Laravel</span>
+                        <span class="tech-badge">Tailwind CSS</span>
+                        <span class="tech-badge">MySQL</span>
+                        <span class="tech-badge">Docker</span>
+                    </div>
+                    <div class="flex gap-2 text-sm text-secondary">
+                        <svg class="w-5 h-5 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                        <span>Manajemen Data Warga & Administrasi Desa</span>
+                    </div>
+                </div>
+
+                <!-- Project 2: UMKMTegal -->
+                <div class="card-hover">
+                    <!-- Project Screenshot -->
+                    <div class="project-image-container mb-6">
+                        <img src="./assets/umkmtegal-screenshot.jpg" alt="UMKMTegal Screenshot" class="project-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="project-image-placeholder">
+                            <svg class="w-16 h-16 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                            </svg>
+                            <p class="text-secondary text-sm mt-2">Screenshot Project</p>
+                        </div>
+                    </div>
+                    
+                    <div class="icon-well mb-4 inline-flex">
+                        <svg class="w-8 h-8 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="font-display font-bold text-2xl mb-3">UMKMTegal</h3>
+                    <p class="text-secondary mb-4">Website direktori UMKM di daerah Tegal dan sekitarnya untuk mempromosikan usaha lokal dan memudahkan masyarakat menemukan produk UMKM.</p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="tech-badge">PHP</span>
+                        <span class="tech-badge">Laravel</span>
+                        <span class="tech-badge">Livewire</span>
+                        <span class="tech-badge">MySQL</span>
+                        <span class="tech-badge">Tailwind CSS</span>
+                        <span class="tech-badge">Docker</span>
+                    </div>
+                    <div class="flex gap-2 text-sm text-secondary">
+                        <svg class="w-5 h-5 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                        <span>Direktori UMKM Lokal Tegal</span>
+                    </div>
+                </div>
+
+                <!-- Project 3: NgopiTegal -->
+                <div class="card-hover">
+                    <!-- Project Screenshot -->
+                    <div class="project-image-container mb-6">
+                        <img src="./assets/ngopitegal-screenshot.jpg" alt="NgopiTegal Screenshot" class="project-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="project-image-placeholder">
+                            <svg class="w-16 h-16 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                            </svg>
+                            <p class="text-secondary text-sm mt-2">Screenshot Project</p>
+                        </div>
+                    </div>
+                    
+                    <div class="icon-well mb-4 inline-flex">
+                        <svg class="w-8 h-8 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="font-display font-bold text-2xl mb-3">NgopiTegal</h3>
+                    <p class="text-secondary mb-4">Website direktori coffee shop yang berada di Tegal dengan informasi lengkap lokasi, menu, dan review untuk para pecinta kopi.</p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="tech-badge">TypeScript</span>
+                        <span class="tech-badge">React</span>
+                        <span class="tech-badge">Prisma</span>
+                        <span class="tech-badge">Tailwind CSS</span>
+                        <span class="tech-badge">PostgreSQL</span>
+                        <span class="tech-badge">Docker</span>
+                    </div>
+                    <div class="flex gap-2 text-sm text-secondary">
+                        <svg class="w-5 h-5 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                        <span>Direktori Coffee Shop Tegal</span>
+                    </div>
+                </div>
+
+                <!-- Project 4: Klaim EDP CRB -->
+                <div class="card-hover">
+                    <!-- Project Screenshot -->
+                    <div class="project-image-container mb-6">
+                        <img src="./assets/klaim-edp-screenshot.jpg" alt="Klaim EDP CRB Screenshot" class="project-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="project-image-placeholder">
+                            <svg class="w-16 h-16 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                            </svg>
+                            <p class="text-secondary text-sm mt-2">Screenshot Project</p>
+                        </div>
+                    </div>
+                    
+                    <div class="icon-well mb-4 inline-flex">
+                        <svg class="w-8 h-8 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="font-display font-bold text-2xl mb-3">Klaim EDP CRB</h3>
+                    <p class="text-secondary mb-4">Sistem klaim internal perusahaan untuk mengelola klaim BBM, service kendaraan, tol dan keperluan operasional lainnya secara digital.</p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="tech-badge">TypeScript</span>
+                        <span class="tech-badge">React</span>
+                        <span class="tech-badge">Prisma</span>
+                        <span class="tech-badge">Tailwind CSS</span>
+                        <span class="tech-badge">Supabase</span>
+                    </div>
+                    <div class="flex gap-2 text-sm text-secondary">
+                        <svg class="w-5 h-5 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                        <span>Sistem Klaim Internal Perusahaan</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="py-20 px-6">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="font-display font-bold text-4xl md:text-5xl tracking-tight text-center mb-12">Pengalaman Kerja</h2>
+            
+            <div class="max-w-4xl mx-auto space-y-8">
+                <!-- Experience Item -->
+                <div class="card-hover">
+                    <div class="flex gap-4 mb-4">
+                        <div class="icon-well flex-shrink-0">
+                            <svg class="w-6 h-6 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                        </div>
+                        <div class="flex-1">
+                            <h3 class="font-display font-bold text-2xl mb-2">IT Support Specialist</h3>
+                            <p class="text-xl md:text-2xl text-accent font-medium mb-2">Perusahaan • 2019 - Sekarang</p>
+                            <ul class="text-secondary space-y-2">
+                                <li>• Menangani 50+ tiket support per minggu dengan tingkat resolusi 95%</li>
+                                <li>• Melakukan maintenance preventif untuk 200+ workstation dan perangkat IT</li>
+                                <li>• Mengimplementasikan sistem ticketing yang meningkatkan efisiensi 40%</li>
+                                <li>• Memberikan training IT kepada 100+ karyawan baru setiap tahun</li>
+                                <li>• Mengelola infrastruktur jaringan dan server perusahaan</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Stats -->
+                <div class="grid md:grid-cols-3 gap-6">
+                    <div class="card text-center" data-aos="fade-up" data-aos-delay="100">
+                        <div class="text-4xl font-display font-extrabold text-accent mb-2" data-count="5" data-suffix="+">0+</div>
+                        <div class="text-secondary">Tahun Pengalaman</div>
+                    </div>
+                    <div class="card text-center" data-aos="fade-up" data-aos-delay="200">
+                        <div class="text-4xl font-display font-extrabold text-accent mb-2" data-count="200" data-suffix="+">0+</div>
+                        <div class="text-secondary">Perangkat Dikelola</div>
+                    </div>
+                    <div class="card text-center" data-aos="fade-up" data-aos-delay="300">
+                        <div class="text-4xl font-display font-extrabold text-accent mb-2" data-count="95" data-suffix="%">0%</div>
+                        <div class="text-secondary">Tingkat Resolusi</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 px-6">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="font-display font-bold text-4xl md:text-5xl tracking-tight text-center mb-12">Hubungi Saya</h2>
+            
+            <div class="max-w-2xl mx-auto">
+                <div class="card">
+                    <form id="contactForm" class="space-y-6">
+                        <div>
+                            <label for="name" class="block text-sm font-medium mb-2">Nama</label>
+                            <input type="text" id="name" name="name" required 
+                                class="input-field w-full" 
+                                placeholder="Nama Anda">
+                        </div>
+                        
+                        <div>
+                            <label for="email" class="block text-sm font-medium mb-2">Email</label>
+                            <input type="email" id="email" name="email" required 
+                                class="input-field w-full" 
+                                placeholder="email@example.com">
+                        </div>
+                        
+                        <div>
+                            <label for="message" class="block text-sm font-medium mb-2">Pesan</label>
+                            <textarea id="message" name="message" rows="5" required 
+                                class="input-field w-full resize-none" 
+                                placeholder="Tulis pesan Anda di sini..."></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn-primary w-full focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 focus:ring-offset-light dark:ring-offset-dark">
+                            Kirim Pesan
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
+                    <!-- Email Card -->
+                    <div class="contact-card">
+                        <div class="icon-well flex-shrink-0">
+                            <svg class="w-6 h-6 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                            </svg>
+                        </div>
+                        <div class="flex-1 min-w-0">
+                            <h3 class="font-display font-bold text-lg mb-1 text-primary">Email</h3>
+                            <p class="text-secondary text-sm truncate">irfan.riyanto@email.com</p>
+                        </div>
+                    </div>
+                    
+                    <!-- LinkedIn Card -->
+                    <div class="contact-card">
+                        <div class="icon-well flex-shrink-0">
+                            <svg class="w-6 h-6 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                            </svg>
+                        </div>
+                        <div class="flex-1 min-w-0">
+                            <h3 class="font-display font-bold text-lg mb-1 text-primary">LinkedIn</h3>
+                            <p class="text-secondary text-sm truncate">linkedin.com/in/irfanriyanto</p>
+                        </div>
+                    </div>
+                    
+                    <!-- GitHub Card -->
+                    <div class="contact-card">
+                        <div class="icon-well flex-shrink-0">
+                            <svg class="w-6 h-6 text-accent" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                            </svg>
+                        </div>
+                        <div class="flex-1 min-w-0">
+                            <h3 class="font-display font-bold text-lg mb-1 text-primary">GitHub</h3>
+                            <p class="text-secondary text-sm truncate">github.com/irfanriyanto</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Instagram Card -->
+                    <div class="contact-card">
+                        <div class="icon-well flex-shrink-0">
+                            <svg class="w-6 h-6 text-accent" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                            </svg>
+                        </div>
+                        <div class="flex-1 min-w-0">
+                            <h3 class="font-display font-bold text-lg mb-1 text-primary">Instagram</h3>
+                            <p class="text-secondary text-sm truncate">@irfanriyanto</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-8 px-6 mt-20">
+        <div class="max-w-7xl mx-auto text-center">
+            <p class="text-secondary">© 2026 Irfan Riyanto. Dibuat dengan passion untuk teknologi.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
