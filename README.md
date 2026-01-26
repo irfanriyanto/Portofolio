@@ -5,13 +5,28 @@ Website portofolio pribadi dengan desain Neumorphism (Soft UI) yang modern dan e
 ## ✨ Fitur Utama
 
 ### 🎨 Design & UI
-- **Neumorphism Design System** dengan warna Lavender (#6D7993) yang soft dan elegant
+- **Neumorphism Design System** dengan warna Cool Grey (#6D7993) yang soft dan elegant
 - **Dark Mode / Light Mode** dengan modern toggle switch (sun/moon icons)
+- **Bilingual Support (ID/EN)** - Website mendukung 2 bahasa dengan language toggle
 - **Fully Responsive** - Mobile-first design untuk semua device
 - **Floating Particles Effect** - Partikel animasi yang melayang di background (50+ particles)
 - **Smooth Neumorphic Shadows** - Shadow yang adaptif untuk light & dark mode
 
+### 🌐 Multi-Language
+- **Language Toggle Desktop** - Tombol neumorphic di navigation bar
+- **Language Toggle Mobile** - Floating button di kanan bawah layar
+- **LocalStorage Persistence** - Bahasa tersimpan dan tidak reset saat refresh
+- **Smooth Translation** - Semua text berubah secara instant tanpa reload
+- **Complete Coverage** - Semua section ditranslate (Navigation, Hero, About, Skills, Projects, Experience, Contact, Footer)
+
 ### 🎭 Animasi & Efek
+- **Interactive Loading Screen** - Grid reveal animation dengan neumorphic blocks di seluruh layar
+  - Grid blocks dengan random delay dan rotation
+  - Corner accents dengan pulse effect
+  - Floating particles dari bawah ke atas
+  - Center brand logo dengan floating animation
+  - Progress bar dengan gradient fill
+  - Loading text dengan letter-spacing animation
 - **AOS (Animate On Scroll)** - Fade in animations saat scroll
 - **Typing Animation** - Efek typing pada nama di hero section
 - **Floating Background Circles** - Animated gradient orbs
@@ -21,7 +36,6 @@ Website portofolio pribadi dengan desain Neumorphism (Soft UI) yang modern dan e
 - **Image Zoom on Hover** - Project images dengan zoom effect
 - **Button Ripple Effect** - Material design ripple pada buttons
 - **Scroll Progress Indicator** - Progress bar di top page (3px)
-- **Loading Screen** - Smooth loading animation dengan spinner
 - **Icon Pulse Animation** - Icons dengan pulse effect on hover
 - **Shimmer Effect** - Subtle shimmer pada card hover
 - **Easter Egg** - Konami code untuk rainbow animation
@@ -32,6 +46,8 @@ Website portofolio pribadi dengan desain Neumorphism (Soft UI) yang modern dan e
 - **Mobile Menu** - Hamburger menu untuk mobile devices
 - **Sticky Navigation** - Navbar tetap di atas saat scroll
 - **Theme Persistence** - Dark/Light mode preference tersimpan di localStorage
+- **Language Persistence** - Pilihan bahasa tersimpan di localStorage
+- **Neumorphic Buttons** - Semua buttons menggunakan neumorphic shadow yang konsisten
 
 ### 📄 Sections
 - **Hero Section** - Dengan space untuk foto profil (350x350px)
@@ -179,6 +195,44 @@ box-shadow: inset 6px 6px 10px var(--shadow-light-1),
 
 ## 🎬 Animasi & Efek
 
+### Interactive Loading Screen
+- **Grid Blocks**: 50 kotak neumorphic tersebar di seluruh layar
+  - Random delay untuk staggered effect
+  - Rotation 360° saat muncul
+  - Scale animation dari 0.5 ke 1.0
+- **Corner Accents**: 4 lingkaran accent di setiap sudut
+  - Pulse effect dengan delay berbeda
+  - Opacity berubah dari 0.15 ke 0.3
+- **Floating Particles**: 4 partikel melayang dari bawah ke atas
+  - Horizontal drift animation
+  - Fade in/out effect
+- **Center Brand**: Logo "IR" dengan floating animation
+  - TranslateY dan rotate effect
+  - Neumorphic shadow yang dalam
+- **Progress Bar**: Inset neumorphic dengan gradient fill
+  - Width animation dari 0% ke 100%
+  - Smooth 2 second duration
+- **Loading Text**: "LOADING" dengan letter-spacing animation
+  - Letter-spacing berubah dari 4px ke 6px
+  - Opacity pulse effect
+- **Duration**: 2.2 detik total
+- **Responsive**: Adaptif untuk mobile dan desktop
+
+### Language Toggle Buttons
+- **Desktop Button**: 44x44px dengan border-radius 12px
+  - Neumorphic extruded shadow
+  - Hover: translateY(-2px) + enhanced shadow
+  - Active: Inset shadow (pressed effect)
+  - Ripple animation saat diklik
+- **Mobile Floating Button**: 56x56px bulat (border-radius 50%)
+  - Fixed position di bottom-right (24px dari tepi)
+  - Hover: translateY(-3px) + scale(1.05)
+  - Active: Inset shadow + scale(1)
+  - Hidden di desktop (≥768px)
+- **Color**: Accent color untuk text
+- **Font**: Plus Jakarta Sans, bold, 14-16px
+- **Transition**: Smooth 0.3s cubic-bezier
+
 ### Floating Particles
 - **Jumlah**: 50+ particles
 - **Ukuran**: 4px - 14px (random)
@@ -247,6 +301,14 @@ box-shadow: inset 6px 6px 10px var(--shadow-light-1),
 
 ## 🎯 Roadmap & Future Enhancements
 
+### ✅ Completed
+- [x] Bilingual support (ID/EN) dengan language toggle
+- [x] Neumorphic language toggle buttons (desktop & mobile)
+- [x] Interactive loading screen dengan grid reveal animation
+- [x] LocalStorage untuk theme dan language persistence
+- [x] Floating particles background effect
+- [x] Dark mode dengan smooth transition
+
 ### Prioritas Tinggi
 - [ ] Skills Progress Bars dengan animated percentage
 - [ ] Back to Top Button (floating)
@@ -260,13 +322,14 @@ box-shadow: inset 6px 6px 10px var(--shadow-light-1),
 - [ ] Timeline visual untuk pengalaman
 - [ ] Project filters by technology
 - [ ] Contact form integration (EmailJS/Formspree)
+- [ ] More language options (EN, JP, etc)
 
 ### Prioritas Low
 - [ ] Blog section
-- [ ] Multi-language support (ID/EN)
 - [ ] Print-friendly CV version
 - [ ] Analytics integration (Google Analytics)
 - [ ] PWA support
+- [ ] Voice command navigation
 
 ## 📝 Lisensi
 
