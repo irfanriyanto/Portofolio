@@ -51,12 +51,19 @@
                 <div class="flex items-center gap-4">
                     <!-- Desktop Menu -->
                     <div class="hidden md:flex items-center gap-3">
-                        <a href="#home" class="nav-btn">Home</a>
-                        <a href="#about" class="nav-btn">Tentang</a>
-                        <a href="#skills" class="nav-btn">Keahlian</a>
-                        <a href="#projects" class="nav-btn">Project</a>
-                        <a href="#experience" class="nav-btn">Pengalaman</a>
-                        <a href="#contact" class="nav-btn-primary">Kontak</a>
+                        <a href="#home" class="nav-btn" data-i18n="navHome">Home</a>
+                        <a href="#about" class="nav-btn" data-i18n="navAbout">Tentang</a>
+                        <a href="#skills" class="nav-btn" data-i18n="navSkills">Keahlian</a>
+                        <a href="#projects" class="nav-btn" data-i18n="navProjects">Project</a>
+                        <a href="#experience" class="nav-btn" data-i18n="navExperience">Pengalaman</a>
+                        <a href="#contact" class="nav-btn-primary" data-i18n="navContact">Kontak</a>
+                    </div>
+                    
+                    <!-- Language Toggle (Desktop only) -->
+                    <div class="hidden md:flex items-center">
+                        <button id="langToggle" class="w-10 h-10 rounded-xl flex items-center justify-center focus:outline-none transition-all duration-300 bg-accent shadow-light dark:shadow-dark text-white font-display font-bold text-sm" aria-label="Toggle language">
+                            <span id="langText">ID</span>
+                        </button>
                     </div>
                     
                     <!-- Dark Mode Toggle Switch -->
@@ -97,12 +104,12 @@
             <!-- Mobile Menu -->
             <div id="mobileMenu" class="hidden md:hidden mt-4 p-6 rounded-[32px] shadow-extruded">
                 <ul class="flex flex-col gap-3">
-                    <li><a href="#home" class="nav-btn block text-center">Home</a></li>
-                    <li><a href="#about" class="nav-btn block text-center">Tentang</a></li>
-                    <li><a href="#skills" class="nav-btn block text-center">Keahlian</a></li>
-                    <li><a href="#projects" class="nav-btn block text-center">Project</a></li>
-                    <li><a href="#experience" class="nav-btn block text-center">Pengalaman</a></li>
-                    <li><a href="#contact" class="nav-btn-primary block text-center">Kontak</a></li>
+                    <li><a href="#home" class="nav-btn block text-center" data-i18n="navHome">Home</a></li>
+                    <li><a href="#about" class="nav-btn block text-center" data-i18n="navAbout">Tentang</a></li>
+                    <li><a href="#skills" class="nav-btn block text-center" data-i18n="navSkills">Keahlian</a></li>
+                    <li><a href="#projects" class="nav-btn block text-center" data-i18n="navProjects">Project</a></li>
+                    <li><a href="#experience" class="nav-btn block text-center" data-i18n="navExperience">Pengalaman</a></li>
+                    <li><a href="#contact" class="nav-btn-primary block text-center" data-i18n="navContact">Kontak</a></li>
                 </ul>
             </div>
         </div>
@@ -117,21 +124,21 @@
         <div class="max-w-7xl mx-auto relative z-10">
             <div class="grid md:grid-cols-2 gap-12 items-center">
                 <div class="space-y-6" data-aos="fade-right" data-aos-duration="800">
-                    <h1 class="font-display font-extrabold text-5xl md:text-7xl tracking-tight">
+                    <h1 class="font-display font-extrabold text-5xl md:text-7xl tracking-tight" data-i18n="heroGreeting">
                         Halo, Saya<br>
                         <span class="text-accent typing-text">Irfan Riyanto</span>
                     </h1>
-                    <p class="text-xl md:text-2xl text-secondary font-medium">
+                    <p class="text-xl md:text-2xl text-secondary font-medium" data-i18n="heroTitle">
                         IT Support Professional
                     </p>
-                    <p class="text-base md:text-lg text-secondary">
+                    <p class="text-base md:text-lg text-secondary" data-i18n="heroDescription">
                         Dengan pengalaman lebih dari 5 tahun sebagai IT Support yang berfokus pada hardware support, software support dan network administration untuk mendukung operasional perusahaan.
                     </p>
                     <div class="flex gap-3 pt-4">
-                        <a href="#projects" class="btn-primary text-base md:text-base px-6 md:px-8 py-3 md:py-3.5 whitespace-nowrap focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 focus:ring-offset-light dark:ring-offset-dark">
+                        <a href="#projects" class="btn-primary text-base md:text-base px-6 md:px-8 py-3 md:py-3.5 whitespace-nowrap focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 focus:ring-offset-light dark:ring-offset-dark" data-i18n="heroButtonProject">
                             Lihat Project
                         </a>
-                        <a href="#contact" class="btn-secondary text-base md:text-base px-6 md:px-8 py-3 md:py-3.5 whitespace-nowrap focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 focus:ring-offset-light dark:ring-offset-dark">
+                        <a href="#contact" class="btn-secondary text-base md:text-base px-6 md:px-8 py-3 md:py-3.5 whitespace-nowrap focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 focus:ring-offset-light dark:ring-offset-dark" data-i18n="heroButtonContact">
                             Hubungi Saya
                         </a>
                     </div>
@@ -159,7 +166,7 @@
     <!-- About Section -->
     <section id="about" class="py-20 px-6">
         <div class="max-w-7xl mx-auto">
-            <h2 class="font-display font-bold text-4xl md:text-5xl tracking-tight text-center mb-12" data-aos="fade-up">Tentang Saya</h2>
+            <h2 class="font-display font-bold text-4xl md:text-5xl tracking-tight text-center mb-12" data-aos="fade-up" data-i18n="aboutTitle">Tentang Saya</h2>
             
             <div class="card max-w-4xl mx-auto" data-aos="fade-up" data-aos-delay="200">
                 <div class="flex flex-col md:flex-row gap-8 items-center">
@@ -169,11 +176,11 @@
                         </svg>
                     </div>
                     <div class="flex-1 text-center md:text-left">
-                        <h3 class="font-display font-bold text-2xl mb-4">IT Enthusiast & Problem Solver</h3>
-                        <p class="text-secondary leading-relaxed mb-4">
+                        <h3 class="font-display font-bold text-2xl mb-4" data-i18n="aboutSubtitle">IT Enthusiast & Problem Solver</h3>
+                        <p class="text-secondary leading-relaxed mb-4" data-i18n="aboutText1">
                             Saya adalah seorang IT Support professional dengan passion dalam teknologi dan pemecahan masalah. Selama >5 tahun berkarir di divisi ini, saya telah membantu ratusan pengguna mengatasi berbagai tantangan teknis dan meningkatkan produktivitas mereka.
                         </p>
-                        <p class="text-secondary leading-relaxed">
+                        <p class="text-secondary leading-relaxed" data-i18n="aboutText2">
                             Keahlian saya mencakup troubleshooting hardware & software, manajemen jaringan MikroTik, sistem administrasi, dan memberikan solusi teknis yang efektif. Dari setup komputer, instalasi sistem operasi, hingga konfigurasi network client-server, saya percaya bahwa teknologi harus memberdayakan, bukan memperumit.
                         </p>
                     </div>
@@ -185,7 +192,7 @@
     <!-- Skills Section -->
     <section id="skills" class="py-20 px-6">
         <div class="max-w-7xl mx-auto">
-            <h2 class="font-display font-bold text-4xl md:text-5xl tracking-tight text-center mb-12" data-aos="fade-up">Keahlian Teknis</h2>
+            <h2 class="font-display font-bold text-4xl md:text-5xl tracking-tight text-center mb-12" data-aos="fade-up" data-i18n="skillsTitle">Keahlian Teknis</h2>
             
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <!-- Skill Card 1 -->
@@ -195,8 +202,8 @@
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
                         </svg>
                     </div>
-                    <h3 class="font-display font-bold text-xl mb-3">Hardware Support</h3>
-                    <p class="text-secondary">Troubleshooting, maintenance, replacement dan upgrade komponen komputer, laptop dan perangkat IT lainnya.</p>
+                    <h3 class="font-display font-bold text-xl mb-3" data-i18n="skill1Title">Hardware Support</h3>
+                    <p class="text-secondary" data-i18n="skill1Desc">Troubleshooting, maintenance, replacement dan upgrade komponen komputer, laptop dan perangkat IT lainnya.</p>
                 </div>
 
                 <!-- Skill Card 2 -->
@@ -206,8 +213,8 @@
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
                         </svg>
                     </div>
-                    <h3 class="font-display font-bold text-xl mb-3">Software Support</h3>
-                    <p class="text-secondary">Instalasi, konfigurasi dan troubleshooting sistem operasi (Windows/Linux), aplikasi bisnis, driver, printer sharing dan software enterprise.</p>
+                    <h3 class="font-display font-bold text-xl mb-3" data-i18n="skill2Title">Software Support</h3>
+                    <p class="text-secondary" data-i18n="skill2Desc">Instalasi, konfigurasi dan troubleshooting sistem operasi (Windows/Linux), aplikasi bisnis, driver, printer sharing dan software enterprise.</p>
                 </div>
 
                 <!-- Skill Card 3 -->
@@ -217,8 +224,8 @@
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"></path>
                         </svg>
                     </div>
-                    <h3 class="font-display font-bold text-xl mb-3">Network Administration</h3>
-                    <p class="text-secondary">Konfigurasi Router MikroTik menggunakan Winbox, setup client-server architecture dan troubleshooting konektivitas LAN/WAN.</p>
+                    <h3 class="font-display font-bold text-xl mb-3" data-i18n="skill3Title">Network Administration</h3>
+                    <p class="text-secondary" data-i18n="skill3Desc">Konfigurasi Router MikroTik menggunakan Winbox, setup client-server architecture dan troubleshooting konektivitas LAN/WAN.</p>
                 </div>
 
                 <!-- Skill Card 4 -->
@@ -228,8 +235,8 @@
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2m-2-4h.01M17 16h.01"></path>
                         </svg>
                     </div>
-                    <h3 class="font-display font-bold text-xl mb-3">System Administration</h3>
-                    <p class="text-secondary">Manajemen Active Directory, user accounts, permissions, backup systems dan server maintenance.</p>
+                    <h3 class="font-display font-bold text-xl mb-3" data-i18n="skill4Title">System Administration</h3>
+                    <p class="text-secondary" data-i18n="skill4Desc">Manajemen Active Directory, user accounts, permissions, backup systems dan server maintenance.</p>
                 </div>
 
                 <!-- Skill Card 5 -->
@@ -239,8 +246,8 @@
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path>
                         </svg>
                     </div>
-                    <h3 class="font-display font-bold text-xl mb-3">Security & Compliance</h3>
-                    <p class="text-secondary">Implementasi security policies, antivirus management dan compliance dengan standar keamanan IT.</p>
+                    <h3 class="font-display font-bold text-xl mb-3" data-i18n="skill5Title">Security & Compliance</h3>
+                    <p class="text-secondary" data-i18n="skill5Desc">Implementasi security policies, antivirus management dan compliance dengan standar keamanan IT.</p>
                 </div>
 
                 <!-- Skill Card 6 -->
@@ -250,8 +257,8 @@
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
                         </svg>
                     </div>
-                    <h3 class="font-display font-bold text-xl mb-3">User Training</h3>
-                    <p class="text-secondary">Memberikan pelatihan teknis kepada end-user dan membuat dokumentasi SOP yang mudah dipahami.</p>
+                    <h3 class="font-display font-bold text-xl mb-3" data-i18n="skill6Title">User Training</h3>
+                    <p class="text-secondary" data-i18n="skill6Desc">Memberikan pelatihan teknis kepada end-user dan membuat dokumentasi SOP yang mudah dipahami.</p>
                 </div>
             </div>
         </div>
@@ -260,7 +267,7 @@
     <!-- Projects Section -->
     <section id="projects" class="py-20 px-6 bg-light dark:bg-dark">
         <div class="max-w-7xl mx-auto">
-            <h2 class="font-display font-bold text-4xl md:text-5xl tracking-tight text-center mb-12" data-aos="fade-up">Portofolio Project</h2>
+            <h2 class="font-display font-bold text-4xl md:text-5xl tracking-tight text-center mb-12" data-aos="fade-up" data-i18n="projectsTitle">Portofolio Project</h2>
             
             <div class="grid md:grid-cols-2 gap-8">
                 <!-- Project 1: RukunApp -->
@@ -281,8 +288,8 @@
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
                         </svg>
                     </div>
-                    <h3 class="font-display font-bold text-2xl mb-3">RukunApp</h3>
-                    <p class="text-secondary mb-4">Sistem Manajemen dan Administrasi Warga untuk mengelola data warga, administrasi warga, kegiatan warga, arsip dokumen dan lain-lain secara digital.</p>
+                    <h3 class="font-display font-bold text-2xl mb-3" data-i18n="project1Title">RukunApp</h3>
+                    <p class="text-secondary mb-4" data-i18n="project1Desc">Sistem Manajemen dan Administrasi Warga untuk mengelola data warga, administrasi warga, kegiatan warga, arsip dokumen dan lain-lain secara digital.</p>
                     <div class="flex flex-wrap gap-2 mb-4">
                         <span class="tech-badge">PHP</span>
                         <span class="tech-badge">Laravel</span>
@@ -294,7 +301,7 @@
                         <svg class="w-5 h-5 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                         </svg>
-                        <span>Manajemen Data Warga & Administrasi Desa</span>
+                        <span data-i18n="project1Feature">Manajemen Data Warga & Administrasi Desa</span>
                     </div>
                 </div>
 
@@ -316,8 +323,8 @@
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"></path>
                         </svg>
                     </div>
-                    <h3 class="font-display font-bold text-2xl mb-3">UMKMTegal</h3>
-                    <p class="text-secondary mb-4">Website direktori UMKM di daerah Tegal dan sekitarnya untuk mempromosikan UMKM lokal dan memudahkan masyarakat menemukan produk UMKM.</p>
+                    <h3 class="font-display font-bold text-2xl mb-3" data-i18n="project2Title">UMKMTegal</h3>
+                    <p class="text-secondary mb-4" data-i18n="project2Desc">Website direktori UMKM di daerah Tegal dan sekitarnya untuk mempromosikan UMKM lokal dan memudahkan masyarakat menemukan produk UMKM.</p>
                     <div class="flex flex-wrap gap-2 mb-4">
                         <span class="tech-badge">PHP</span>
                         <span class="tech-badge">Laravel</span>
@@ -330,7 +337,7 @@
                         <svg class="w-5 h-5 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                         </svg>
-                        <span>Direktori UMKM Lokal Tegal</span>
+                        <span data-i18n="project2Feature">Direktori UMKM Lokal Tegal</span>
                     </div>
                 </div>
 
@@ -354,8 +361,8 @@
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h16"></path>
                         </svg>
                     </div>
-                    <h3 class="font-display font-bold text-2xl mb-3">NgopiTegal</h3>
-                    <p class="text-secondary mb-4">Website direktori coffee shop yang berada di Tegal dengan informasi lengkap seperti lokasi, menu, dan review untuk para pecinta kopi.</p>
+                    <h3 class="font-display font-bold text-2xl mb-3" data-i18n="project3Title">NgopiTegal</h3>
+                    <p class="text-secondary mb-4" data-i18n="project3Desc">Website direktori coffee shop yang berada di Tegal dengan informasi lengkap seperti lokasi, menu, dan review untuk para pecinta kopi.</p>
                     <div class="flex flex-wrap gap-2 mb-4">
                         <span class="tech-badge">TypeScript</span>
                         <span class="tech-badge">React</span>
@@ -369,7 +376,7 @@
                         <svg class="w-5 h-5 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                         </svg>
-                        <span>Direktori Coffee Shop Tegal</span>
+                        <span data-i18n="project3Feature">Direktori Coffee Shop Tegal</span>
                     </div>
                 </div>
 
@@ -391,8 +398,8 @@
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
                         </svg>
                     </div>
-                    <h3 class="font-display font-bold text-2xl mb-3">Klaim EDP CRB</h3>
-                    <p class="text-secondary mb-4">Sistem klaim internal perusahaan untuk mengelola klaim BBM, service kendaraan, tol dan keperluan operasional lainnya secara digital.</p>
+                    <h3 class="font-display font-bold text-2xl mb-3" data-i18n="project4Title">Klaim EDP CRB</h3>
+                    <p class="text-secondary mb-4" data-i18n="project4Desc">Sistem klaim internal perusahaan untuk mengelola klaim BBM, service kendaraan, tol dan keperluan operasional lainnya secara digital.</p>
                     <div class="flex flex-wrap gap-2 mb-4">
                         <span class="tech-badge">TypeScript</span>
                         <span class="tech-badge">React</span>
@@ -405,7 +412,7 @@
                         <svg class="w-5 h-5 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                         </svg>
-                        <span>Sistem Klaim Internal Perusahaan</span>
+                        <span data-i18n="project4Feature">Sistem Klaim Internal Perusahaan</span>
                     </div>
                 </div>
             </div>
@@ -415,7 +422,7 @@
     <!-- Experience Section -->
     <section id="experience" class="py-20 px-6">
         <div class="max-w-7xl mx-auto">
-            <h2 class="font-display font-bold text-4xl md:text-5xl tracking-tight text-center mb-12">Pengalaman Kerja</h2>
+            <h2 class="font-display font-bold text-4xl md:text-5xl tracking-tight text-center mb-12" data-i18n="experienceTitle">Pengalaman Kerja</h2>
             
             <div class="max-w-4xl mx-auto space-y-8">
                 <!-- Experience Item -->
@@ -428,47 +435,47 @@
                             </svg>
                         </div>
                         <div class="flex-1">
-                            <h3 class="font-display font-bold text-xl md:text-2xl mb-2 text-center md:text-left">IT Support Specialist</h3>
-                            <p class="text-base md:text-xl text-accent font-medium mb-1 text-center md:text-left">PT Indomarco Prismatama Cirebon</p>
-                            <p class="text-sm md:text-base text-secondary font-medium mb-4 text-center md:text-left">2021 - 2026</p>
-                            <p class="text-secondary mb-4 leading-relaxed text-center md:text-left">
+                            <h3 class="font-display font-bold text-xl md:text-2xl mb-2 text-center md:text-left" data-i18n="expJobTitle">IT Support Specialist</h3>
+                            <p class="text-base md:text-xl text-accent font-medium mb-1 text-center md:text-left" data-i18n="expCompany">PT Indomarco Prismatama Cirebon</p>
+                            <p class="text-sm md:text-base text-secondary font-medium mb-4 text-center md:text-left" data-i18n="expPeriod">2021 - 2026</p>
+                            <p class="text-secondary mb-4 leading-relaxed text-center md:text-left" data-i18n="expDescription">
                                 Bertanggung jawab atas pengelolaan infrastruktur IT perusahaan dengan fokus pada hardware, software dan networking. Menangani 50+ tiket support per minggu dengan tingkat resolusi 95%.
                             </p>
                             
                             <!-- Hardware Support -->
                             <div class="mb-4">
-                                <h4 class="font-display font-bold text-lg text-primary mb-2 text-center md:text-left">Hardware Support:</h4>
+                                <h4 class="font-display font-bold text-lg text-primary mb-2 text-center md:text-left" data-i18n="expHardwareTitle">Hardware Support:</h4>
                                 <ul class="text-secondary space-y-1.5 ml-0 md:ml-4 text-left">
-                                    <li>• Setup komputer baru sesuai spesifikasi kebutuhan</li>
-                                    <li>• Troubleshooting dan perbaikan hardware (motherboard, RAM, HDD/SSD, power supply)</li>
-                                    <li>• Replacement komponen komputer yang rusak atau upgrade</li>
-                                    <li>• Preventive maintenance untuk 200+ workstation dan perangkat IT</li>
-                                    <li>• Diagnosa dan resolusi masalah hardware secara efisien</li>
+                                    <li data-i18n="expHardware1">• Setup komputer baru sesuai spesifikasi kebutuhan</li>
+                                    <li data-i18n="expHardware2">• Troubleshooting dan perbaikan hardware (motherboard, RAM, HDD/SSD, power supply)</li>
+                                    <li data-i18n="expHardware3">• Replacement komponen komputer yang rusak atau upgrade</li>
+                                    <li data-i18n="expHardware4">• Preventive maintenance untuk 200+ workstation dan perangkat IT</li>
+                                    <li data-i18n="expHardware5">• Diagnosa dan resolusi masalah hardware secara efisien</li>
                                 </ul>
                             </div>
                             
                             <!-- Software Support -->
                             <div class="mb-4">
-                                <h4 class="font-display font-bold text-lg text-primary mb-2 text-center md:text-left">Software Support:</h4>
+                                <h4 class="font-display font-bold text-lg text-primary mb-2 text-center md:text-left" data-i18n="expSoftwareTitle">Software Support:</h4>
                                 <ul class="text-secondary space-y-1.5 ml-0 md:ml-4 text-left">
-                                    <li>• Instalasi dan konfigurasi sistem operasi (Windows/Linux)</li>
-                                    <li>• Instalasi dan setup aplikasi bisnis dan productivity tools</li>
-                                    <li>• Update dan instalasi driver perangkat keras</li>
-                                    <li>• Maintenance dan optimasi performa sistem operasi</li>
-                                    <li>• Troubleshooting software issues dan error resolution</li>
-                                    <li>• Konfigurasi printer sharing antar komputer dalam jaringan</li>
+                                    <li data-i18n="expSoftware1">• Instalasi dan konfigurasi sistem operasi (Windows/Linux)</li>
+                                    <li data-i18n="expSoftware2">• Instalasi dan setup aplikasi bisnis dan productivity tools</li>
+                                    <li data-i18n="expSoftware3">• Update dan instalasi driver perangkat keras</li>
+                                    <li data-i18n="expSoftware4">• Maintenance dan optimasi performa sistem operasi</li>
+                                    <li data-i18n="expSoftware5">• Troubleshooting software issues dan error resolution</li>
+                                    <li data-i18n="expSoftware6">• Konfigurasi printer sharing antar komputer dalam jaringan</li>
                                 </ul>
                             </div>
                             
                             <!-- Network Administration -->
                             <div class="mb-4">
-                                <h4 class="font-display font-bold text-lg text-primary mb-2 text-center md:text-left">Network Administration:</h4>
+                                <h4 class="font-display font-bold text-lg text-primary mb-2 text-center md:text-left" data-i18n="expNetworkTitle">Network Administration:</h4>
                                 <ul class="text-secondary space-y-1.5 ml-0 md:ml-4 text-left">
-                                    <li>• Konfigurasi dan management Router MikroTik menggunakan Winbox</li>
-                                    <li>• Setup koneksi client-server architecture</li>
-                                    <li>• Troubleshooting konektivitas jaringan LAN/WAN</li>
-                                    <li>• Monitoring dan maintenance infrastruktur jaringan</li>
-                                    <li>• Implementasi network security policies</li>
+                                    <li data-i18n="expNetwork1">• Konfigurasi dan management Router MikroTik menggunakan Winbox</li>
+                                    <li data-i18n="expNetwork2">• Setup koneksi client-server architecture</li>
+                                    <li data-i18n="expNetwork3">• Troubleshooting konektivitas jaringan LAN/WAN</li>
+                                    <li data-i18n="expNetwork4">• Monitoring dan maintenance infrastruktur jaringan</li>
+                                    <li data-i18n="expNetwork5">• Implementasi network security policies</li>
                                 </ul>
                             </div>
                         </div>
@@ -479,15 +486,15 @@
                 <div class="grid md:grid-cols-3 gap-6">
                     <div class="card text-center" data-aos="fade-up" data-aos-delay="100">
                         <div class="text-4xl font-display font-extrabold text-accent mb-2" data-count="5" data-suffix="+">0+</div>
-                        <div class="text-secondary">Tahun Pengalaman</div>
+                        <div class="text-secondary" data-i18n="stat1">Tahun Pengalaman</div>
                     </div>
                     <div class="card text-center" data-aos="fade-up" data-aos-delay="200">
                         <div class="text-4xl font-display font-extrabold text-accent mb-2" data-count="200" data-suffix="+">0+</div>
-                        <div class="text-secondary">Perangkat Dikelola</div>
+                        <div class="text-secondary" data-i18n="stat2">Perangkat Dikelola</div>
                     </div>
                     <div class="card text-center" data-aos="fade-up" data-aos-delay="300">
                         <div class="text-4xl font-display font-extrabold text-accent mb-2" data-count="95" data-suffix="%">0%</div>
-                        <div class="text-secondary">Tingkat Resolusi</div>
+                        <div class="text-secondary" data-i18n="stat3">Tingkat Resolusi</div>
                     </div>
                 </div>
             </div>
@@ -497,33 +504,33 @@
     <!-- Contact Section -->
     <section id="contact" class="py-20 px-6">
         <div class="max-w-7xl mx-auto">
-            <h2 class="font-display font-bold text-4xl md:text-5xl tracking-tight text-center mb-12">Hubungi Saya</h2>
+            <h2 class="font-display font-bold text-4xl md:text-5xl tracking-tight text-center mb-12" data-i18n="contactTitle">Hubungi Saya</h2>
             
             <div class="max-w-2xl mx-auto">
                 <div class="card">
                     <form id="contactForm" class="space-y-6">
                         <div>
-                            <label for="name" class="block text-sm font-medium mb-2">Nama</label>
+                            <label for="name" class="block text-sm font-medium mb-2" data-i18n="contactNameLabel">Nama</label>
                             <input type="text" id="name" name="name" required 
                                 class="input-field w-full" 
                                 placeholder="Nama Anda">
                         </div>
                         
                         <div>
-                            <label for="email" class="block text-sm font-medium mb-2">Email</label>
+                            <label for="email" class="block text-sm font-medium mb-2" data-i18n="contactEmailLabel">Email</label>
                             <input type="email" id="email" name="email" required 
                                 class="input-field w-full" 
                                 placeholder="email@example.com">
                         </div>
                         
                         <div>
-                            <label for="message" class="block text-sm font-medium mb-2">Pesan</label>
+                            <label for="message" class="block text-sm font-medium mb-2" data-i18n="contactMessageLabel">Pesan</label>
                             <textarea id="message" name="message" rows="5" required 
                                 class="input-field w-full resize-none" 
                                 placeholder="Tulis pesan Anda di sini..."></textarea>
                         </div>
                         
-                        <button type="submit" class="btn-primary w-full px-8 py-3.5 focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 focus:ring-offset-light dark:ring-offset-dark">
+                        <button type="submit" class="btn-primary w-full px-8 py-3.5 focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 focus:ring-offset-light dark:ring-offset-dark" data-i18n="contactSubmitButton">
                             Kirim Pesan
                         </button>
                     </form>
@@ -539,7 +546,7 @@
                             </svg>
                         </div>
                         <div class="flex-1 min-w-0">
-                            <h3 class="font-display font-bold text-lg mb-1 text-primary">Email</h3>
+                            <h3 class="font-display font-bold text-lg mb-1 text-primary" data-i18n="contactEmail">Email</h3>
                             <p class="text-secondary text-sm truncate">iffanriyanto@gmail.com</p>
                         </div>
                     </a>
@@ -552,7 +559,7 @@
                             </svg>
                         </div>
                         <div class="flex-1 min-w-0">
-                            <h3 class="font-display font-bold text-lg mb-1 text-primary">LinkedIn</h3>
+                            <h3 class="font-display font-bold text-lg mb-1 text-primary" data-i18n="contactLinkedIn">LinkedIn</h3>
                             <p class="text-secondary text-sm truncate">linkedin.com/in/irfanriyanto</p>
                         </div>
                     </a>
@@ -565,7 +572,7 @@
                             </svg>
                         </div>
                         <div class="flex-1 min-w-0">
-                            <h3 class="font-display font-bold text-lg mb-1 text-primary">GitHub</h3>
+                            <h3 class="font-display font-bold text-lg mb-1 text-primary" data-i18n="contactGitHub">GitHub</h3>
                             <p class="text-secondary text-sm truncate">github.com/irfanriyanto</p>
                         </div>
                     </a>
@@ -578,7 +585,7 @@
                             </svg>
                         </div>
                         <div class="flex-1 min-w-0">
-                            <h3 class="font-display font-bold text-lg mb-1 text-primary">Instagram</h3>
+                            <h3 class="font-display font-bold text-lg mb-1 text-primary" data-i18n="contactInstagram">Instagram</h3>
                             <p class="text-secondary text-sm truncate">@irfanriyanto_</p>
                         </div>
                     </a>
@@ -590,9 +597,14 @@
     <!-- Footer -->
     <footer class="py-8 px-6 mt-20">
         <div class="max-w-7xl mx-auto text-center">
-            <p class="text-secondary">© 2026 Irfan Riyanto. Dibuat dengan passion untuk teknologi.</p>
+            <p class="text-secondary" data-i18n="footerText">© 2026 Irfan Riyanto. Dibuat dengan passion untuk teknologi.</p>
         </div>
     </footer>
+
+    <!-- Floating Language Button (Mobile only) -->
+    <button id="floatingLangBtn" class="md:hidden fixed bottom-6 right-6 w-14 h-14 rounded-full bg-accent shadow-extruded dark:shadow-dark flex items-center justify-center focus:outline-none transition-all duration-300 z-40 text-white font-display font-bold text-base hover:scale-110" aria-label="Toggle language">
+        <span id="floatingLangText">ID</span>
+    </button>
 
     <script src="script.js"></script>
 </body>
