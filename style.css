@@ -376,9 +376,6 @@ nav {
 .input-field:focus {
     outline: none;
     box-shadow: inset 10px 10px 20px rgb(163,177,198,0.7), inset -10px -10px 20px rgba(255,255,255,0.6);
-    ring: 2px;
-    ring-color: #6C63FF;
-    ring-offset: 2px;
 }
 
 /* Hero Decoration */
@@ -698,9 +695,6 @@ a, button, .card-hover, .tech-badge {
 .input-field:focus {
     outline: none;
     box-shadow: inset 10px 10px 20px var(--shadow-light-1), inset -10px -10px 20px var(--shadow-light-2);
-    ring: 2px;
-    ring-color: var(--color-accent);
-    ring-offset: 2px;
 }
 
 .dark .input-field:focus {
@@ -1034,6 +1028,141 @@ a, button, .card-hover, .tech-badge {
 
 .glow-on-hover:hover::before {
     opacity: 0.5;
+}
+
+/* ===== THEME TOGGLE SWITCH ===== */
+
+.theme-switch-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+/* ===== LANGUAGE TOGGLE BUTTONS ===== */
+
+/* Desktop Language Toggle */
+.lang-toggle-btn {
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+    background: var(--color-light);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border: none;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 5px 5px 10px var(--shadow-light-1), -5px -5px 10px var(--shadow-light-2);
+    color: var(--color-accent);
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    position: relative;
+    overflow: hidden;
+}
+
+.dark .lang-toggle-btn {
+    box-shadow: 5px 5px 10px var(--shadow-dark-1), -5px -5px 10px var(--shadow-dark-2);
+}
+
+.lang-toggle-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 7px 7px 14px var(--shadow-light-1), -7px -7px 14px var(--shadow-light-2);
+}
+
+.dark .lang-toggle-btn:hover {
+    box-shadow: 7px 7px 14px var(--shadow-dark-1), -7px -7px 14px var(--shadow-dark-2);
+}
+
+.lang-toggle-btn:active {
+    transform: translateY(0);
+    box-shadow: inset 3px 3px 6px var(--shadow-light-1), inset -3px -3px 6px var(--shadow-light-2);
+}
+
+.dark .lang-toggle-btn:active {
+    box-shadow: inset 3px 3px 6px var(--shadow-dark-1), inset -3px -3px 6px var(--shadow-dark-2);
+}
+
+.lang-toggle-btn:focus {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 2px;
+}
+
+/* Mobile Floating Language Toggle */
+.lang-toggle-floating {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: var(--color-light);
+    cursor: pointer;
+    border: none;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 9px 9px 16px var(--shadow-light-1), -9px -9px 16px var(--shadow-light-2);
+    color: var(--color-accent);
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    z-index: 40;
+}
+
+.dark .lang-toggle-floating {
+    box-shadow: 9px 9px 16px var(--shadow-dark-1), -9px -9px 16px var(--shadow-dark-2);
+}
+
+.lang-toggle-floating:hover {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 12px 12px 20px var(--shadow-light-1), -12px -12px 20px var(--shadow-light-2);
+}
+
+.dark .lang-toggle-floating:hover {
+    box-shadow: 12px 12px 20px var(--shadow-dark-1), -12px -12px 20px var(--shadow-dark-2);
+}
+
+.lang-toggle-floating:active {
+    transform: translateY(0) scale(1);
+    box-shadow: inset 6px 6px 10px var(--shadow-light-1), inset -6px -6px 10px var(--shadow-light-2);
+}
+
+.dark .lang-toggle-floating:active {
+    box-shadow: inset 6px 6px 10px var(--shadow-dark-1), inset -6px -6px 10px var(--shadow-dark-2);
+}
+
+.lang-toggle-floating:focus {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 3px;
+}
+
+/* Hide floating button on desktop */
+@media (min-width: 768px) {
+    .lang-toggle-floating {
+        display: none;
+    }
+}
+
+/* Ripple effect for language buttons */
+.lang-toggle-btn::after,
+.lang-toggle-floating::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(109, 121, 147, 0.3);
+    transform: translate(-50%, -50%);
+    transition: width 0.6s, height 0.6s;
+}
+
+.lang-toggle-btn:active::after,
+.lang-toggle-floating:active::after {
+    width: 100px;
+    height: 100px;
 }
 
 /* ===== THEME TOGGLE SWITCH ===== */
