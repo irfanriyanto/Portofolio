@@ -1166,10 +1166,10 @@ a, button, .card-hover, .tech-badge {
 
 @keyframes brand-float {
     0%, 100% {
-        transform: translateY(0) rotate(0deg);
+        transform: translateY(0);
     }
     50% {
-        transform: translateY(-10px) rotate(5deg);
+        transform: translateY(-15px);
     }
 }
 
