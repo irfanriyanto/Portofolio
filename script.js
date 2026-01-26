@@ -187,22 +187,72 @@ window.addEventListener('load', () => {
     const loader = document.createElement('div');
     loader.className = 'loader';
     
-    const loaderDot = document.createElement('div');
-    loaderDot.className = 'loader-dot';
+    // Create grid blocks (background decoration)
+    const loaderGrid = document.createElement('div');
+    loaderGrid.className = 'loader-grid';
     
+    // Calculate number of blocks based on screen size
+    const blocksCount = Math.floor((window.innerWidth / 100)) * Math.floor((window.innerHeight / 100));
+    for (let i = 0; i < Math.min(blocksCount, 50); i++) {
+        const block = document.createElement('div');
+        block.className = 'loader-block';
+        block.style.animationDelay = `${Math.random() * 1.5}s`;
+        loaderGrid.appendChild(block);
+    }
+    
+    // Create corner accents
+    for (let i = 0; i < 4; i++) {
+        const accent = document.createElement('div');
+        accent.className = 'loader-accent';
+        loader.appendChild(accent);
+    }
+    
+    // Create floating particles
+    for (let i = 0; i < 4; i++) {
+        const particle = document.createElement('div');
+        particle.className = 'loader-particle';
+        loader.appendChild(particle);
+    }
+    
+    // Center content
+    const loaderCenter = document.createElement('div');
+    loaderCenter.className = 'loader-center';
+    
+    // Brand/Logo
+    const loaderBrand = document.createElement('div');
+    loaderBrand.className = 'loader-brand';
+    const brandText = document.createElement('div');
+    brandText.className = 'loader-brand-text';
+    brandText.textContent = 'IR';
+    loaderBrand.appendChild(brandText);
+    
+    // Progress bar
+    const loaderProgress = document.createElement('div');
+    loaderProgress.className = 'loader-progress';
+    const progressBar = document.createElement('div');
+    progressBar.className = 'loader-progress-bar';
+    loaderProgress.appendChild(progressBar);
+    
+    // Loading text
     const loaderText = document.createElement('div');
     loaderText.className = 'loader-text';
     loaderText.textContent = 'LOADING';
     
-    loader.appendChild(loaderDot);
-    loader.appendChild(loaderText);
+    // Assemble center content
+    loaderCenter.appendChild(loaderBrand);
+    loaderCenter.appendChild(loaderProgress);
+    loaderCenter.appendChild(loaderText);
+    
+    // Assemble loader
+    loader.appendChild(loaderGrid);
+    loader.appendChild(loaderCenter);
     loadingScreen.appendChild(loader);
     document.body.prepend(loadingScreen);
     
     setTimeout(() => {
         loadingScreen.classList.add('hidden');
         setTimeout(() => loadingScreen.remove(), 500);
-    }, 1500);
+    }, 2200);
 });
 
 // Scroll Progress Indicator
