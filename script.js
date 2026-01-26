@@ -183,13 +183,26 @@ document.addEventListener('DOMContentLoaded', () => {
 window.addEventListener('load', () => {
     const loadingScreen = document.createElement('div');
     loadingScreen.className = 'loading-screen';
-    loadingScreen.innerHTML = '<div class="loader"></div>';
+    
+    const loader = document.createElement('div');
+    loader.className = 'loader';
+    
+    const loaderDot = document.createElement('div');
+    loaderDot.className = 'loader-dot';
+    
+    const loaderText = document.createElement('div');
+    loaderText.className = 'loader-text';
+    loaderText.textContent = 'LOADING';
+    
+    loader.appendChild(loaderDot);
+    loader.appendChild(loaderText);
+    loadingScreen.appendChild(loader);
     document.body.prepend(loadingScreen);
     
     setTimeout(() => {
         loadingScreen.classList.add('hidden');
         setTimeout(() => loadingScreen.remove(), 500);
-    }, 1000);
+    }, 1500);
 });
 
 // Scroll Progress Indicator
