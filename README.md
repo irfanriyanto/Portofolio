@@ -2,33 +2,21 @@
 
 Website portofolio pribadi dengan desain Neumorphism (Soft UI) yang modern dan elegant untuk IT Support Professional.
 
-![Portfolio Preview](.github/preview.png)
-
 ## 📸 Screenshots
 
 ### 🌞 Light Mode
 <div align="center">
-  <img src=".github/light-hero.png" alt="Hero Section - Light Mode" width="45%">
-  <img src=".github/light-skills.png" alt="Skills Section - Light Mode" width="45%">
+  <img src=".github/light-hero.png" alt="Hero Section - Light Mode" width="100%">
 </div>
 
 ### 🌙 Dark Mode
 <div align="center">
-  <img src=".github/dark-hero.png" alt="Hero Section - Dark Mode" width="45%">
-  <img src=".github/dark-projects.png" alt="Projects Section - Dark Mode" width="45%">
+  <img src=".github/dark-hero.png" alt="Hero Section - Dark Mode" width="100%">
 </div>
 
 ### 📱 Mobile Responsive
 <div align="center">
-  <img src=".github/mobile-menu.png" alt="Mobile Menu" width="30%">
-  <img src=".github/mobile-hero.png" alt="Mobile Hero" width="30%">
-  <img src=".github/mobile-projects.png" alt="Mobile Projects" width="30%">
-</div>
-
-### ✨ Special Features
-<div align="center">
-  <img src=".github/loading-screen.png" alt="Loading Screen Animation" width="45%">
-  <img src=".github/language-toggle.png" alt="Language Toggle (ID/EN)" width="45%">
+  <img src=".github/mobile-hero.png" alt="Mobile View" width="40%">
 </div>
 
 ---
