@@ -448,16 +448,16 @@ const translations = {
         // Hero Section
         heroGreeting: 'Halo, Saya',
         heroName: 'Irfan Riyanto',
-        heroTitle: 'IT Support Professional',
-        heroDescription: 'Dengan pengalaman lebih dari 5 tahun sebagai IT Support yang berfokus pada hardware support, software support dan network administration untuk mendukung operasional perusahaan.',
+        heroTitle: 'IT Support Professional & Freelance Web Developer',
+        heroDescription: 'Dengan pengalaman lebih dari 5 tahun sebagai IT Support yang berfokus pada hardware support, software support dan network administration. Juga aktif sebagai freelance web developer dengan keahlian HTML, CSS, JavaScript, dan PHP untuk membangun website yang fungsional dan modern.',
         heroButtonProject: 'Lihat Project',
         heroButtonContact: 'Hubungi Saya',
         
         // About Section
         aboutTitle: 'Tentang Saya',
-        aboutSubtitle: 'IT Enthusiast & Problem Solver',
-        aboutText1: 'Saya adalah seorang IT Support professional dengan passion dalam teknologi dan pemecahan masalah. Selama >5 tahun berkarir di divisi ini, saya telah membantu ratusan pengguna mengatasi berbagai tantangan teknis dan meningkatkan produktivitas mereka.',
-        aboutText2: 'Keahlian saya mencakup troubleshooting hardware & software, manajemen jaringan MikroTik, sistem administrasi, dan memberikan solusi teknis yang efektif. Dari setup komputer, instalasi sistem operasi, hingga konfigurasi network client-server, saya percaya bahwa teknologi harus memberdayakan, bukan memperumit.',
+        aboutSubtitle: 'IT Professional & Web Developer',
+        aboutText1: 'Saya adalah seorang IT Support professional dengan passion dalam teknologi dan pemecahan masalah. Selama >5 tahun berkarir di bidang ini, saya telah membantu ratusan pengguna mengatasi berbagai tantangan teknis dan meningkatkan produktivitas mereka.',
+        aboutText2: 'Selain itu, saya juga aktif sebagai freelance web developer, mengembangkan website dengan HTML, CSS, JavaScript, dan PHP. Dari sistem manajemen warga hingga platform direktori bisnis, saya fokus menciptakan solusi web yang user-friendly dan sesuai kebutuhan klien. Keahlian saya mencakup troubleshooting hardware & software, manajemen jaringan MikroTik, sistem administrasi dan web development yang fungsional.',
         
         // Skills Section
         skillsTitle: 'Keahlian Teknis',
@@ -550,16 +550,16 @@ const translations = {
         // Hero Section
         heroGreeting: 'Hello, I\'m',
         heroName: 'Irfan Riyanto',
-        heroTitle: 'IT Support Professional',
-        heroDescription: 'With over 5 years of experience as an IT Support professional focusing on hardware support, software support, and network administration to support company operations.',
+        heroTitle: 'IT Support Professional & Freelance Web Developer',
+        heroDescription: 'With over 5 years of experience as an IT Support professional focusing on hardware support, software support, and network administration. Also active as a freelance web developer with expertise in HTML, CSS, JavaScript, and PHP to build functional and modern websites.',
         heroButtonProject: 'View Projects',
         heroButtonContact: 'Contact Me',
         
         // About Section
         aboutTitle: 'About Me',
-        aboutSubtitle: 'IT Enthusiast & Problem Solver',
+        aboutSubtitle: 'IT Professional & Web Developer',
         aboutText1: 'I am an IT Support professional with a passion for technology and problem-solving. Over >5 years in this field, I have helped hundreds of users overcome various technical challenges and improve their productivity.',
-        aboutText2: 'My expertise includes hardware & software troubleshooting, MikroTik network management, system administration, and providing effective technical solutions. From computer setup, operating system installation, to client-server network configuration, I believe technology should empower, not complicate.',
+        aboutText2: 'Additionally, I am also active as a freelance web developer, developing websites with HTML, CSS, JavaScript, and PHP. From resident management systems to business directory platforms, I focus on creating user-friendly web solutions tailored to client needs. My expertise includes hardware & software troubleshooting, MikroTik network management, system administration, and functional web development.',
         
         // Skills Section
         skillsTitle: 'Technical Skills',
