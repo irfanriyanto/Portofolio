@@ -362,7 +362,7 @@ Contributions, issues, and feature requests are welcome!
 
 **Irfan Riyanto**
 - GitHub: [@irfanriyanto](https://github.com/irfanriyanto)
-- LinkedIn: [Irfan Riyanto](https://linkedin.com/in/irfanriyanto)
+- LinkedIn: [Irfan Riyanto](https://linkedin.com/in/irfanriyanto25)
 
 ---
 
